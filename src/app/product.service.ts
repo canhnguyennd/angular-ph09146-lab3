@@ -9,6 +9,6 @@ export class ProductService {
 
   getProducts(){
     return this.products;
-    console.log(this.products);
+    // console.log(this.products);
   }
 }

@@ -16,7 +16,7 @@ export class ProductListComponent implements OnInit {
     private abc: ProductService
   ) { }
   ngOnInit() {
-    this.getproducts;
+    this.getproducts();
   }
   showDetail(product){
     this.selected=product;
@@ -24,5 +24,6 @@ export class ProductListComponent implements OnInit {
   }
   getproducts(){
   this.products=this.abc.getProducts();
+  // console.log(this.products);
   }
 }

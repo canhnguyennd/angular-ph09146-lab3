@@ -1,5 +1,5 @@
 import {Product} from './Product'
-export const Data : Product[] =
+export const data : Product[] =
 [
   {
     id:1,

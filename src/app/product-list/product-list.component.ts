@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Data} from '../MockData';
+// import {data} from '../MockData';
 import {Product} from '../Product';
+import {ProductService} from '../product.service';
 
 @Component({
   selector: 'app-product-list',
@@ -9,14 +10,19 @@ import {Product} from '../Product';
 })
 export class ProductListComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-  products=Data;
+  products:Product[];
   selected:Product;
+  constructor(
+    private abc: ProductService
+  ) { }
+  ngOnInit() {
+    this.getproducts;
+  }
   showDetail(product){
     this.selected=product;
-    console.log(this.selected);
+    // console.log(this.selected);
+  }
+  getproducts(){
+  this.products=this.abc.getProducts();
   }
 }

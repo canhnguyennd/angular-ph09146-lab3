@@ -19,10 +19,11 @@
               </div>
               <div class="card-footer">
                 <small class="text-muted">
+                  <button (click)="showDetail(product)">name</button>
                 </small>
               </div>
             </div>
         </div>
-        
+        <p *ngIf="selected">{{selected.name}}</p>
 
 </div>

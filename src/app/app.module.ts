@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { ProductComponent } from './product/product.component';
@@ -16,7 +18,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
-  imports:      [ BrowserModule, AppRoutingModule, FormsModule ],
+  imports:      [ BrowserModule, AppRoutingModule, FormsModule, HttpClientModule ],
   declarations: [ AppComponent, HelloComponent, ProductComponent, ProductListComponent, SlideComponent, CategoryComponent, ProductAddComponent, AboutComponent, HomeComponent, ProductDetailComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService]

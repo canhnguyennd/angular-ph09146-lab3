@@ -13,7 +13,7 @@ export class ProductListComponent implements OnInit {
   products:Product[];
   selected:Product;
   constructor(
-    private abc: ProductService
+    private productService: ProductService
   ) { }
   ngOnInit() {
     this.getproducts();
@@ -23,7 +23,11 @@ export class ProductListComponent implements OnInit {
     // console.log(this.selected);
   }
   getproducts(){
-  this.products=this.abc.getProducts();
+    this.productService.getProducts().subscribe(data => {
+      this.products = data;
+      console.log(data);
+    })
+  // this.products=this.productService.getProducts();
   // console.log(this.products);
   }
 }

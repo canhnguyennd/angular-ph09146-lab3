@@ -12,10 +12,11 @@ import { CategoryComponent } from './category/category.component';
 import { ProductService } from './product.service';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   imports:      [ BrowserModule, AppRoutingModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, ProductComponent, ProductListComponent, SlideComponent, CategoryComponent, ProductAddComponent, AboutComponent ],
+  declarations: [ AppComponent, HelloComponent, ProductComponent, ProductListComponent, SlideComponent, CategoryComponent, ProductAddComponent, AboutComponent, HomeComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService]
 })

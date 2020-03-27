@@ -1,11 +1,7 @@
 <div class="row">
 
-        <!-- <app-product class="col-lg-4 col-md-6 mb-4"></app-product>
-        <app-product class="col-lg-4 col-md-6 mb-4"></app-product>
-        <app-product class="col-lg-4 col-md-6 mb-4"></app-product>
-        <app-product class="col-lg-4 col-md-6 mb-4"></app-product>
-        <app-product class="col-lg-4 col-md-6 mb-4"></app-product>
-        <app-product class="col-lg-4 col-md-6 mb-4"></app-product> -->
+        <!-- <!-- <app-product class="col-lg-4 col-md-6 mb-4"></app-product> -->
+
         <div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of products">
           <div class="card h-100" >
               <a href="#"><img class="card-img-top" src="https://dummyimage.com/700x400" alt=""></a>
@@ -19,7 +15,8 @@
               </div>
               <div class="card-footer">
                 <small class="text-muted">
-                  <button (click)="showDetail(product)">name</button>
+                  <button routerLink="/product/{{product.id}}">chi tiet</button>
+                  <!-- <button (click)="removeProduct()">xóa</button> -->
                 </small>
               </div>
             </div>

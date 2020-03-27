@@ -7,9 +7,13 @@ export class ProductService {
   products = data;
   constructor() { }
 
-  getProducts(){
+  getProducts(){//lays ds sp
     return this.products;
     // console.log(this.products);
+  }
+  getProduct(id){//chi tiet sp
+  console.log(id)
+  return this.products.find(product => product.id == id);
   }
 
   addProduct(product){
